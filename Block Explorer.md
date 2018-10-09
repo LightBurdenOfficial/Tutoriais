@@ -38,7 +38,9 @@ cp ./settings.json.template ./settings.json
 
 ### Para a utilização do FOREVER para manter o serviço rodando em segundo plano digite dentro do diretório de instalação do Block Explorer:
 ```sh
-forever start -c "npm start" ./
+$ sudo npm install forever -g
+$ sudo npm install forever-monitor
+$ forever start bin/cluster
 ```
 ### Adicione as seguintes tarefas no crontab:
 ```sh
