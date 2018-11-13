@@ -91,7 +91,6 @@ $ sudo ./SperoCoind stop
 $ sudo apt-get update
 $ sudo apt install nodejs nodejs-legacy -y
 $ sudo apt-get install npm -y
-$ sudo apt-get install
 ```
 
 ### Instalação das dependências do Mongodb
@@ -138,7 +137,7 @@ Para criar um usuário e definir as suas credenciais digite, onde `iquidus` é o
 ```
 ### Clonando o repositório do Block Explorer:
 ```sh
-git clone https://github.com/iquidus/explorer explorer
+git clone https://github.com/DigitalCoin1/BlockExplorer.git explorer
 ```
 ### Acesse o diretório e realize a instalação:
 ```sh
