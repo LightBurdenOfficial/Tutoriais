@@ -104,6 +104,35 @@ $ sudo apt-get install mongodb-org=2.6.2 mongodb-org-server=2.6.2 mongodb-org-sh
 $ sudo systemctl start mongod
 ```
 
+Para ajudar na pausa/inicio dos serviços, criaremos um artquivo que conterá os comandos necessários para tal chamado `mongodb.service`:
+
+```sh
+$ sudo nano /etc/systemd/system/mongodb.service
+```
+Cole o conteúdo abaixo:
+> [Unit]<br>
+> Description=High-performance, schema-free document-oriented database<br>
+> After=network.target<br>
+> 
+> [Service]<br>
+> User=mongodb<br>
+> ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf<br>
+> 
+> [Install]<br>
+> WantedBy=multi-user.target<br>
+
+Salve o arquivo e envie o comando:
+
+```sh
+sudo systemctl start mongodb
+```
+
+Para conferir o status envie:
+
+```sh
+sudo systemctl status mongodb
+```
+
 Opção 02 (https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 ```sh
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
