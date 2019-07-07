@@ -91,6 +91,11 @@ $ sudo ./SperoCoind stop
 $ sudo apt-get update
 $ sudo apt install nodejs nodejs-legacy -y
 $ sudo apt-get install npm -y
+sudo npm install -g npm
+sudo npm install -g n
+sudo n stable
+
+sudo ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node
 ```
 
 ### Instalação das dependências do Mongodb
