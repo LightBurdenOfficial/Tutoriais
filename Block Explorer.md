@@ -89,11 +89,11 @@ $ sudo ./SperoCoind stop
 ### Instalação das dependências do Bloco Explorer
 ```sh
 $ sudo apt-get update
-$ sudo apt install nodejs nodejs-legacy -y
+$ sudo apt install nodejs nodejs-legacy curl -y
 $ sudo apt-get install npm -y
-sudo npm install -g npm
-sudo npm install -g n
-sudo n stable
+$ sudo npm install -g npm
+$ sudo npm install -g n
+$ sudo n stable
 
 sudo ln -sf /usr/local/n/versions/node/<VERSION>/bin/node /usr/bin/node
 ```
